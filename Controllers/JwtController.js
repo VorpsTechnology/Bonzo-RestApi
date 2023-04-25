@@ -3,10 +3,10 @@ import UserModel from "../Model/userModel.js";
 
 export const createNew=async(req,res)=>{
    try {
-
-      const {userId,username}=req.body
-
-      const user = await UserModel.findOne({ username: username });
+     console.log("haiii");
+      const {userId,userName}=req.body
+console.log("log",userId,userName);
+      const user = await UserModel.findOne({ username: userName });
      if(user){
       const token = jwt.sign(
         {
@@ -18,6 +18,8 @@ export const createNew=async(req,res)=>{
       );
 
       res.status(200).json({ user, token });
+     }else{
+      res.status(400).json({message:"not found" });
      }
    } catch (error) {
     res.status(500).json(error)
