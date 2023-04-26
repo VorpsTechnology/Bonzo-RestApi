@@ -14,7 +14,7 @@ console.log("log",userId,userName);
           id: user._id,
         },
         process.env.JWT_KEY,
-        { expiresIn: "1h" }
+        { expiresIn: "168h" }
       );
 
       res.status(200).json({ user, token });
