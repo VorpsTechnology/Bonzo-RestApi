@@ -12,6 +12,9 @@ import GuestUser from "./Routes/GuestUser.js"
 import CashInOut from "./Routes/CashInOutRoute.js"
 import SupportRoute from "./Routes/SupportRoute.js"
 import JwtRoute from "./Routes/jwtRoute.js"
+import KycRoute from "./Routes/KycWalletRoute.js"
+
+import newGameRoute from "./Routes/newGameRouter.js"
 const app = express();
 //limiting the request storage
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
@@ -56,6 +59,9 @@ app.use("/api/:id/guestuser",GuestUser)
 app.use("/api/:id/cashinout",CashInOut)
 app.use("/api/:id/support",SupportRoute)
 app.use("/api/:id/jwt",JwtRoute)
+app.use("/kycwallet",KycRoute)
+
+app.use("/newgame",newGameRoute)
 
 
 
