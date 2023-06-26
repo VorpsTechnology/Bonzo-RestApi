@@ -22,6 +22,9 @@ const kycuserWalletSchema = mongoose.Schema(
       walletPassword:{
         type:String,
       },
+      kyc:{
+        type:Object
+      }
      
     },
     
