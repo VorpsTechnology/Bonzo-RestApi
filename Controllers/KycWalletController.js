@@ -17,22 +17,22 @@ export const verify=async(req,res)=>{
     try {
         const {uuid}=req.body
        // is uuid
-const response1=isuuid(str);  // true
+const response1=isuuid(uuid);  // true
 
 // is uuid v1
-const response2=isuuid(str, 1);  // true
+const response2=isuuid(uuid, 1);  // true
 
 // is uuid v2
-const response3=isuuid(str, 2);  // false
+const response3=isuuid(uuid, 2);  // false
 
 // is uuid v3
-const response4=isuuid(str, 3);  // false
+const response4=isuuid(uuid, 3);  // false
 
 // is uuid v4
-const response5=isuuid(str, 4);  // false
+const response5=isuuid(uuid, 4);  // false
 
 // is uuid v5
-const response6=isuuid(str, 5);  // false
+const response6=isuuid(uuid, 5);  // false
 
 const data={
     v:response1,

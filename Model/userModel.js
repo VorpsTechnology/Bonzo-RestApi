@@ -42,7 +42,8 @@ const UserSchema = mongoose.Schema(
       default:0
     },
     kyc: {
-      type: String,
+      type: Boolean,
+      default:false
     },
     totalMatches: {
       type: Number,
