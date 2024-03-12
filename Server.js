@@ -15,6 +15,7 @@ import JwtRoute from "./Routes/jwtRoute.js"
 import KycRoute from "./Routes/KycWalletRoute.js"
 import verifyKyc from "./Routes/kycverifyRoute.js"
 import newGameRoute from "./Routes/newGameRouter.js"
+import adminRoute from "./Routes/adminRoute.js"
 const app = express();
 //limiting the request storage
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
@@ -62,7 +63,7 @@ app.use("/api/:id/jwt",JwtRoute)
 app.use("/kycwallet",KycRoute)
 app.use("/verify",verifyKyc)
 app.use("/newgame",newGameRoute)
-
+app.use("/api/:id/adminstate",adminRoute)
 
 
  
